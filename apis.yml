@@ -1,23 +1,82 @@
 aid: oneweb
+
 name: OneWeb
-description: 'OneWeb is a company surfaced via the API Evangelist harvest backlog (source: space) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.eutelsat.com/sites/default/files/2026-08/Composite-Images-20260803-124639.png
+
+description: OneWeb, now part of Eutelsat, is a global communications company operating a low Earth orbit satellite constellation to provide broadband
+  internet services worldwide. Founded in 2012, it aims to deliver high‑speed connectivity to underserved regions, enterprises, and maritime and
+  aviation sectors.
+
 url: https://raw.githubusercontent.com/api-evangelist/oneweb/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:space
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
 tags:
 - Company
-apis: []
+- Satellite
+- Broadband
+- LEO
+- Telecommunications
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/oneweb-llms.txt
+- type: WellKnown
+  url: well-known/oneweb-well-known.yml
+- type: Hosts
+  url: hosts/oneweb-hosts.yml
+- type: Vendors
+  url: vendors/oneweb-vendors.yml
+- type: Security
+  url: https://www.eutelsat.com/satellite-services/government/security
+- type: PrivacyPolicy
+  url: https://www.eutelsat.com/privacy-policy
+- type: Newsroom
+  url: https://www.eutelsat.com/media-press/media-centre/news/a1-group-renews-cee-dth-capacity-eutelsat-16deg-east
+- type: Documentation
+  url: https://developer.oneweb.net/
+- type: DomainSecurity
+  url: security/oneweb-domain-security.yml
 - type: Website
   url: https://oneweb.net/
+
+apis:
+- name: OneWeb API
+  description: API for OneWeb satellite broadband services.
+  humanURL: https://eu1.anypoint.mulesoft.com/exchange/portals/oneweb/
+  baseURL: null
+  aid: oneweb:oneweb-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Developer portal at https://eu1.anypoint.mulesoft.com/exchange/portals/oneweb/ renders JavaScript and provides no machine‑readable OpenAPI
+    spec.
+  evidence:
+  - url: https://api.oneweb.net/openapi.json
+    status: 401
+  checked: 2026-09-23
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
