@@ -74,3 +74,30 @@
       OneWeb'' P856 https://oneweb.net'
   status: not-a-workflow
   arazzo: null
+- slug: oneweb-aws-data-exchange
+  label: AWS Data Exchange
+  partner: amazon-data-exchange
+  partner_name: AWS Data Exchange
+  category: data product listing
+  type: marketplace
+  marketplace: amazon-data-exchange-marketplace
+  channel: distribution
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=seller-2bpkbpkhhmzym
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: AWS Data Exchange (AWS Marketplace discovery search, FULFILLMENT_OPTION_TYPE=DATA_EXCHANGE + seller-profile
+      sellerWebsiteUrl)
+    spec_file: null
+    role: data-marketplace-seller
+    registered_name: OneWeb
+    matched_domain: oneweb.net
+    matched_by: domain
+    listings: 1
+    sample_listings:
+    - Satellite Constellation Flight Data by Eutelsat OneWeb
+    signal_note: 'participation: the provider lists data products on this marketplace; counts are context'
+    detected_by: sweep-data-marketplaces.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null

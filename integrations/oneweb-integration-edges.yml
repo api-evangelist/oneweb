@@ -70,6 +70,34 @@ edges:
       OneWeb'' P856 https://oneweb.net'
   detected_by: sweep-space-satellite.py
   first_seen: '2026-10-20'
+- partner_name: AWS Data Exchange
+  partner: amazon-data-exchange
+  partner_match: aggregator
+  type: marketplace
+  marketplace: amazon-data-exchange-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://aws.amazon.com/marketplace/seller-profile?id=seller-2bpkbpkhhmzym
+  category: data product listing
+  contract_reference:
+    register: AWS Data Exchange (AWS Marketplace discovery search, FULFILLMENT_OPTION_TYPE=DATA_EXCHANGE + seller-profile
+      sellerWebsiteUrl)
+    spec_file: null
+    role: data-marketplace-seller
+    registered_name: OneWeb
+    matched_domain: oneweb.net
+    matched_by: domain
+    listings: 1
+    sample_listings:
+    - Satellite Constellation Flight Data by Eutelsat OneWeb
+    signal_note: 'participation: the provider lists data products on this marketplace; counts are context'
+    detected_by: sweep-data-marketplaces.py
+    detected: '2026-10-20'
+  detected_by: sweep-data-marketplaces.py
+  detected: '2026-10-20'
+  publisher_verified:
+  - Deployed on AWS
 generated: '2026-10-20'
 method: searched
 source:
@@ -85,3 +113,4 @@ checked:
 - https://registry.opendata.aws/
 - https://stacindex.org/api/catalogs
 - https://www.fcc.gov/sites/default/files/ssal.xlsx
+- https://aws.amazon.com/marketplace/search/results?FULFILLMENT_OPTION_TYPE=DATA_EXCHANGE
